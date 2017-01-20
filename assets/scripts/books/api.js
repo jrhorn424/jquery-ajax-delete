@@ -1,17 +1,17 @@
 'use strict';
 
-const app = require('../app.js');
+const config = require('../config.js');
 
 const index = function () {
   return $.ajax({
-    url: app.host + '/books',
+    url: config.apiOrigin + '/books',
     method: 'GET',
   });
 };
 
 const show = function (id) {
   return $.ajax({
-    url: app.host + '/books/' + id,
+    url: config.apiOrigin + '/books/' + id,
     method: 'GET',
   });
 };
