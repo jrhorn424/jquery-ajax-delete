@@ -16,7 +16,15 @@ const show = function (id) {
   });
 };
 
+const destroy = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/books/' + id,
+    method: 'DELETE',
+  });
+};
+
 module.exports = {
   index,
   show,
+  destroy,
 };
