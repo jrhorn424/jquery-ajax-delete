@@ -26,6 +26,17 @@ const onGetBooks = function (event) {
   }
 };
 
+const onDeleteBook = function (event) {
+  event.preventDefault();
+  let form = getFormFields(event.target);
+
+  api.destroy(form.book.id)
+  .then(ui.onSuccess)
+  .catch(ui.onError)
+  ;
+};
+
 module.exports = {
   onGetBooks,
+  onDeleteBook,
 };
