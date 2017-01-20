@@ -18,4 +18,5 @@ const bookEvents = require('./books/events');
 // On document ready
 $(() => {
   $('#book-search').on('submit', bookEvents.onGetBooks);
+  $('#book-destroy').on('submit', bookEvents.onDeleteBook);
 });
